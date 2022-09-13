@@ -1,0 +1,31 @@
+{
+  "name": "test_spa_js",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lokki16/test_spa_js.git"
+  },
+  "author": "yuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lokki16/test_spa_js/issues"
+  },
+  "homepage": "https://github.com/Lokki16/test_spa_js#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body-parser": "^1.20.0",
+    "bootstrap-icons": "^1.9.1",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}

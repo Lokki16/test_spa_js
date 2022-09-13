@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Test CRUD</title>
+</head>
+
+<body style="color:black; background-color:whitesmoke">
+    <div class="container py-5">
+        <div class="d-flex pb-3">
+            <div class="align-self-center">
+                <a class="btn" href="/products"><i class="fa fa-arrow-left"></i></a>
+            </div>
+            <div class="px-2"></div>
+            <div class="align-self-center"><b>Добавить товар</b></div>
+        </div>
+        <div class="container px-3 py-3" style="background-color:white">
+            <form action="/api/products" method="POST" id="products_create">
+                <div class="col-md-4">
+                    <label for="name" class="form-label">Название товара</label>
+                    <input type="hidden" name="id">
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="status" class="form-label">Статус</label>
+                    <div class="form-inline">
+                        <input type="radio" id="radio-1" name="status" value="Active">
+                        <label for="radio-1" class="form-label">Active</label>
+                    </div>
+                    <div class="form-inline">
+                        <input type="radio" id="radio-2" name="status" value="Inactive">
+                        <label for="radio-2" class="form-label">Inactive</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="description" class="form-label">Описание</label>
+                    <textarea class="form-control" name="description"></textarea>
+                </div>
+                <div class="col-md-4">
+                    <label for="media" class="form-label">Медиа</label>
+                    <div class="input-group">
+                        <input id="upload" type="file" onchange="readURL(this)" class="form-control">
+                    </div>
+                    <div class="image-area"><img id="imageResult"></div>
+                </div>
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Цена</label>
+                    <input type="number" name="price" class="form-control">
+                </div>
+                <div class="form-group py-2">
+                    <button type="save" class="btn btn-success">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/upload_image.js"></script>
+</body>
+
+</html>
