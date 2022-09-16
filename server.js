@@ -1,6 +1,5 @@
 const express = require('express')
 const bodyparser = require('body-parser')
-const path = require('path')
 
 const app = express()
 
@@ -10,10 +9,7 @@ app.use(bodyparser.urlencoded({ extended : true }))
 
 app.set('view engine', 'ejs')
 
-app.use('/js', express.static(path.resolve(__dirname, 'assets/js')))
-app.use('/img', express.static(path.resolve(__dirname, 'assets/img')))
-
-app.use('/products', require('./server/routes/router'))
+app.use('/products', require('./server/router'))
 
 app.listen(port, (error) => {
     if (error) {
@@ -22,4 +18,3 @@ app.listen(port, (error) => {
         console.log('Server is listening on port ' + port)
     }
 })
-
